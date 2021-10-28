@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="246d0fd5615c44ea965fc743f2ddd0e4" Name="Diagram1">
+        <EntityTypeShape EntityType="VSRModel.Airplanes" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VSRModel.Discounts" Width="1.5" PointX="4.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VSRModel.Flights" Width="1.5" PointX="2.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VSRModel.Stations" Width="1.5" PointX="0.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VSRModel.Tickets" Width="1.5" PointX="5.5" PointY="0.625" IsExpanded="true" />
+        <AssociationConnector Association="VSRModel.FK_Flights_Airplanes" />
+        <AssociationConnector Association="VSRModel.FK_Tickets_Discounts" />
+        <AssociationConnector Association="VSRModel.FK_Flights_Stations" />
+        <AssociationConnector Association="VSRModel.FK_Flights_Tickets" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="BtnAdd" Click="BtnAdd_Click" Width="395">Add</Button>
+            <Button x:Name="BtnDelete" Click="BtnDelete_Click" Width="395">Delete</Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="DataGridRegistrations" ColumnWidth="*" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Ticket_ID}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Class" Binding="{Binding Class}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Place" Binding="{Binding Place}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Discount" Binding="{Binding Discount}">
+                </DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="BtnEdit" Click="BtnEdit_Click">Edit</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
